@@ -66,9 +66,6 @@ class Calculator(QMainWindow):
             except Exception as e:
                 self._input.setText("ERROR")
 
-
-
-
         for text,button in self.calcButtons.items():
             if text == 'C':
                 button.clicked.connect(_c)
@@ -76,8 +73,6 @@ class Calculator(QMainWindow):
                 button.clicked.connect(_result)
             else:
                 button.clicked.connect(partial(_expresion,text))
-
-
 
         self.mainLayout.addLayout(self.layoutButtons)
 
